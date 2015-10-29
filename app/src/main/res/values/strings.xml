@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">AutoCompleteSearch</string>
+    <string name="large_text">
+        "Material is the metaphor.\n
+        交浅莫言深！\n
+        但即使关系好，也要注意不因相知而无礼。\n
+        多了解，少评判。\n
+        要随时随地的小心自己说话是不是让别人舒服。给人方便就是给己方便！\n
+        一定要想方设法管住嘴巴。 \n
+        遇到任何矛盾，对事不对人。 \n
+        尽量不要跟脑子愚钝的人打交道，如果必须打交道，请务必保持200%的清醒。 \n
+        领导的观点和言论，对于你来说只有两个选项可以选择，一是赞同，二是保留意见。\n
+        绝对不要管别人的家务事，无论别人怎么恳求你的赞同或是认可。\n 集体活动，要么（装的）特别高兴的参加，要么（装的）非常痛苦的拒绝。前面两个括号内的内容，酌情选择。\n
+        少提自己的私事，如果到了憋在心里不得不提的时候，先对着镜子说一遍，你觉得合适了，你再找通过第七条的人去倾诉。\n 千万别指望有人理解你。 \n
+        人家请你吃饭,你也要请人家吃饭,人家送你礼物,你也要回赠一份,如果你手头拮据,请在对方在场的公共场合里当着外人面说一句,谢谢你。\n
+        选择相信一个人,这个人必须经历三点考验,第一他找你说了一件他说着说着哭出来或者面露痛苦的事,第二他跟你的见面从来不迟到或者早退也重未临时爽约,第三他从不当着你的面说任何人的坏话。
+
+        "A material metaphor is the unifying theory of a rationalized space and a system of motion."
+        "The material is grounded in tactile reality, inspired by the study of paper and ink, yet "
+        "technologically advanced and open to imagination and magic.\n"
+    </string>
+    <string name="action_settings">Settings</string>
+    <string name="content">不要害怕，很多你怕的事情并不会发生。不要想太多，很多事情的发生你永远想不到。没事别给自己找事，有事不要怕事。直接行动会带来比设想万全计划带来更直接的改变。因为行动会构成既定现实的一部分，而想一堆不会。能处理事情，需要复杂。能过得开心，需要简单。如果处理不了事情，那就复杂一些。如果过得不快乐，那就丢掉一些。</string>
+</resources>

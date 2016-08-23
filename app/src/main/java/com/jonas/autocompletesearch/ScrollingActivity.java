@@ -14,7 +14,7 @@ import android.widget.AutoCompleteTextView;
 import android.widget.EditText;
 import android.widget.TextView;
 
-import com.jonas.autocompletesearch.adapter.HisAdapter;
+import com.jonas.autocompletesearch.adapter.FilterAdapter;
 import com.jonas.autocompletesearch.utills.CharacterParser;
 
 import java.util.Arrays;
@@ -26,7 +26,7 @@ public class ScrollingActivity extends AppCompatActivity implements TextWatcher 
     private AutoCompleteTextView autvSearch;
     private CharacterParser mParser;
     private boolean partMatch;
-    private HisAdapter mAdapter;
+    private FilterAdapter mAdapter;
     private Snackbar mSnackbar;
 
     private void assignViews() {
@@ -48,11 +48,14 @@ public class ScrollingActivity extends AppCompatActivity implements TextWatcher 
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view){
-
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG).setAction("Action", null).show();
+                String showmsg = "拆分匹配";
+                if(partMatch) {
+                    showmsg = "连续匹配";
+                }
+                Snackbar.make(view, showmsg, Snackbar.LENGTH_LONG).setAction("Action", null).show();
                 partMatch = !partMatch;
                 mAdapter.setPartMatch(partMatch);
-                mParser.textHighLighting(tvShow,tvShow.getText().toString(),autvSearch.getText().toString(),"#6aa5e7",partMatch);
+                mParser.setHighlight(tvShow,tvShow.getText().toString(),autvSearch.getText().toString(),"#6aa5e7",partMatch);
             }
         });
 
@@ -60,12 +63,12 @@ public class ScrollingActivity extends AppCompatActivity implements TextWatcher 
         mParser = CharacterParser.getInstance();
 
         String[] strings = {"害怕","zg","rg","任何","如果","如真果"};
-        mAdapter = new HisAdapter(this, android.R.layout.simple_dropdown_item_1line, android.R.id.text1, Arrays.asList(strings));
+        mAdapter = new FilterAdapter(this, android.R.layout.simple_dropdown_item_1line, android.R.id.text1, Arrays.asList(strings));
         autvSearch.setAdapter(mAdapter);
         autvSearch.addTextChangedListener(this);
         //completionThreshold xml属性 默认2 从第几个开始匹配
         autvSearch.setDropDownHeight(500);
-        mParser.textHighLighting(tvShow, tvShow.getText().toString(), "害怕", "#6aa5e7",partMatch);
+        mParser.setHighlight(tvShow, tvShow.getText().toString(), "害怕", "#6aa5e7",partMatch);
 
         autvSearch.setOnFocusChangeListener(new View.OnFocusChangeListener() {
             @Override
@@ -86,7 +89,7 @@ public class ScrollingActivity extends AppCompatActivity implements TextWatcher 
 
     @Override
     public void afterTextChanged(Editable editable){
-        mParser.textHighLighting(tvShow,tvShow.getText().toString(),autvSearch.getText().toString(),"#6aa5e7",partMatch);
+        mParser.setHighlight(tvShow,tvShow.getText().toString(),autvSearch.getText().toString(),"#6aa5e7",partMatch);
     }
 
 
